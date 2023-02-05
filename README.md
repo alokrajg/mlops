@@ -50,4 +50,11 @@ text_tagging/
 ├── train.py      - training utilities
 └── utils.py      - supplementary utilities
 ```
+# Workflow
 
+```
+python main.py elt-data
+python main.py optimize --args-fp="config/args.json" --study-name="optimization" --num-trials=10
+python tmain.py train-model --args-fp="config/args.json" --experiment-name="baselines" --run-name="sgd"
+python main.py predict-tag --text="Transfer learning with transformers for text classification."
+```
