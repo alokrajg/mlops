@@ -51,6 +51,44 @@ text_tagging/
 └── utils.py      - supplementary utilities
 
 ```
+
+## 7. Documentation
+1. Install required packages:
+ *setup.py*
+```
+docs_packages = [
+    "mkdocs==1.3.0",
+    "mkdocstrings==0.18.1"
+]
+
+Define our package:
+setup(
+    ...
+    install_requires=[required_packages],
+    extras_require={
+        "dev": docs_packages,
+        "docs": docs_packages,
+    },
+)
+
+```
+Now we can install this package with:
+> python3 -m pip install -e ".[docs]"
+
+> python3 -m pip install -e ".[dev]"
+
+2. Initialize mkdocs
+> python3 -m mkdocs new .
+```
+.
+├─ docs/
+│  └─ index.md
+└─ mkdocs.yml
+```
+
+
+
+
 # Workflow
 
 ```

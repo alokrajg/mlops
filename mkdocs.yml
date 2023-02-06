@@ -1,0 +1,17 @@
+
+site_name: TEXT Tagging
+nav:
+  - Home: index.md
+  - workflows:
+    - main: main.md
+  - tagifai:
+    - data: text_tagging/data.md
+    - evaluate: text_tagging/evaluate.md
+    - predict: text_tagging/predict.md
+    - train: text_tagging/train.md
+    - utils: text_tagging/utils.md
+theme: readthedocs
+plugins:
+  - mkdocstrings
+watch:
+  - .  # reload docs for any file changes
