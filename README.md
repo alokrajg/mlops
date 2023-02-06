@@ -85,7 +85,43 @@ Now we can install this package with:
 │  └─ index.md
 └─ mkdocs.yml
 ```
+3. Next we'll create documentation files for each script in our text_tagging directory:
 
+```
+mkdir docs/text_tagging
+cd docs/text_tagging
+touch main.md utils.md data.md train.md evaluate.md predict.md
+cd ../../
+```
+4. Next we'll add text_tagging.<SCRIPT_NAME> to each file under docs/text_tagging.
+```
+# docs/text_tagging/data.md
+::: text_tagging.data
+```
+5. Finally, we'll add some configurations to our mkdocs.yml file that mkdocs automatically created:
+
+```
+# mkdocs.yml
+site_name: TEXT TAGGING
+nav:
+  - Home: index.md
+  - workflows:
+    - main: text_tagging/main.md
+  - tagifai:
+    - data: text_tagging/data.md
+    - evaluate: text_tagging/evaluate.md
+    - predict: text_tagging/predict.md
+    - train: text_tagging/train.md
+    - utils: text_tagging/utils.md
+theme: readthedocs
+plugins:
+  - mkdocstrings
+watch:
+  - .  # reload docs for any file changes
+```
+
+6. Serve our documentation locally:
+> python3 -m mkdocs serve
 
 
 
