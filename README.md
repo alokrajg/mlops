@@ -123,7 +123,128 @@ watch:
 6. Serve our documentation locally:
 > python3 -m mkdocs serve
 
+## 7. Styling and Formatting
+Style and formatting conventions to keep our code looking consistent.
 
+**1. Tools**
+
+    Black: an in-place reformatter that (mostly) adheres to PEP8.
+    isort: sorts and formats import statements inside Python scripts.
+    flake8: a code linter with stylistic conventions that adhere to PEP8.
+
+```
+# setup.py
+style_packages = [
+    "black==22.3.0",
+    "flake8==3.9.2",
+    "isort==5.10.1"
+]
+
+# Define our package
+setup(
+    ...
+    extras_require={
+        "dev": docs_packages + style_packages,
+        "docs": docs_packages,
+    },
+)
+```
+**2. Configuration**
+
+> touch pyproject.toml
+```
+# Black formatting
+[tool.black]
+line-length = 100
+include = '\.pyi?$'
+exclude = '''
+/(
+      .eggs         # exclude a few common directories in the
+    | .git          # root of the project
+    | .hg
+    | .mypy_cache
+    | .tox
+    | venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+'''
+```
+```
+# iSort
+[tool.isort]
+profile = "black"
+line_length = 79
+multi_line_output = 3
+include_trailing_comma = true
+virtual_env = "venv"
+```
+For Flake:
+>touch .flake8
+```
+[flake8]
+exclude = venv
+ignore = E501, W503, E226
+max-line-length = 79
+
+# E501: Line too long
+# W503: Line break occurred before binary operator
+# E226: Missing white space around arithmetic operator
+```
+**3. Usage**
+```
+black .
+flake8
+isort .
+```
+
+## 8. Makefiles
+An automation tool that organizes commands for our application's processes.
+>touch Makefile
+
+```
+# Styling
+.PHONY: style
+style:
+    black .
+    flake8
+    isort .
+```
+```
+# Cleaning
+.PHONY: clean
+clean: style
+    find . -type f -name "*.DS_Store" -ls -delete
+    find . | grep -E "(__pycache__|\.pyc|\.pyo)" | xargs rm -rf
+    find . | grep -E ".pytest_cache" | xargs rm -rf
+    find . | grep -E ".ipynb_checkpoints" | xargs rm -rf
+    find . | grep -E ".trash" | xargs rm -rf
+    rm -f .coverage
+```
+```
+# Environment
+.ONESHELL:
+venv:
+    python3 -m venv venv
+    source venv/bin/activate
+    python3 -m pip install pip setuptools wheel
+    python3 -m pip install -e .
+```
+```
+.PHONY: help
+help:
+    @echo "Commands:"
+    @echo "venv    : creates a virtual environment."
+    @echo "style   : executes style formatting."
+    @echo "clean   : cleans all unnecessary files."
+```
+> make venv
+
+> make style
+
+> make clean
 
 # Workflow
 
