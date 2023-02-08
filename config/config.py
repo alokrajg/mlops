@@ -3,6 +3,7 @@ import sys
 from pathlib import Path
 
 import mlflow
+import pretty_errors  # NOQA: F401 (imported but unused)
 from rich.logging import RichHandler
 
 # Assets
