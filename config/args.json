@@ -1,12 +1,14 @@
 {
-    "shuffle": true,
-    "subset": null,
-    "min_freq": 75,
-    "lower": true,
-    "stem": false,
-    "analyzer": "char",
-    "ngram_max_range": 7,
-    "alpha": 1e-4,
-    "learning_rate": 1e-1,
-    "power_t": 0.1
+  "shuffle": true,
+  "subset": null,
+  "min_freq": 75,
+  "lower": true,
+  "stem": false,
+  "analyzer": "char_wb",
+  "ngram_max_range": 4,
+  "alpha": 0.0001,
+  "learning_rate": 0.5735762483144123,
+  "power_t": 0.25483117443036507,
+  "num_epochs": 100,
+  "threshold": 0.675022229447811
 }
