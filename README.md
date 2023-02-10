@@ -246,6 +246,22 @@ help:
 
 > make clean
 
+
+## 9. FastAPI
+```
+app/
+├── api.py          - FastAPI app
+├── gunicorn.py     - WSGI script
+└── schemas.py      - API model schemas
+```
+    api.py: the main script that will include our API initialization and endpoints.
+    gunicorn.py: script for defining API worker configurations.
+    schemas.py: definitions for the different objects we'll use in our resource endpoints.
+
+>uvicorn app.api:app --host 0.0.0.0 --port 8000 --reload --reload-dir text_tagging --reload-dir app  # dev
+
+>gunicorn -c app/gunicorn.py -k uvicorn.workers.UvicornWorker app.api:app  # prod
+
 # Workflow
 
 ```
