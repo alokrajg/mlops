@@ -262,11 +262,75 @@ app/
 
 >gunicorn -c app/gunicorn.py -k uvicorn.workers.UvicornWorker app.api:app  # prod
 
-# Workflow
+## 10. Testing
+**1. Code**
+```
+mkdir tests
+cd tests
+mkdir code
+touch <SCRIPTS>
+cd ../
+```
+test directory
+```
+tests/
+└── code/
+│   ├── test_data.py
+│   ├── test_evaluate.py
+│   ├── test_main.py
+│   ├── test_predict.py
+│   └── test_utils.py
+```
+Add test packages in setup.py
+```
+# setup.py
+test_packages = [
+    "pytest==7.1.2",
+    "pytest-cov==2.10.1"
+]
 
+# Define our package
+setup(
+    ...
+    extras_require={
+        "dev": docs_packages + style_packages + test_packages,
+        "docs": docs_packages,
+        "test": test_packages,
+    },
+)
+```
+Configuration
+```
+# Pytest
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+addopts = "--strict-markers --disable-pytest-warnings"
+markers = [
+    "training: tests that involve training",
+]
+
+# Pytest coverage Exclusions
+[tool.coverage.run]
+omit = ["app/gunicorn.py"]
+```
+**Execution**
+
+all tests
+>python3 -m pytest
+
+tests under a directory
+>python3 -m pytest tests/food  
+
+Coverage
+> python3 -m pytest --cov text_tagging --cov-report html
+
+
+
+# Workflow
 ```
 python main.py elt-data
 python main.py optimize --args-fp="config/args.json" --study-name="optimization" --num-trials=10
-python tmain.py train-model --args-fp="config/args.json" --experiment-name="baselines" --run-name="sgd"
+python main.py train-model --args-fp="config/args.json" --experiment-name="baselines" --run-name="sgd"
 python main.py predict-tag --text="Transfer learning with transformers for text classification."
 
