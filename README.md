@@ -262,11 +262,189 @@ app/
 
 >gunicorn -c app/gunicorn.py -k uvicorn.workers.UvicornWorker app.api:app  # prod
 
-# Workflow
+## 10. Testing
+**1. Test Code**
+```
+mkdir tests
+cd tests
+mkdir code
+touch <SCRIPTS>
+cd ../
+```
 
+test directory
+```
+tests/
+└── code/
+│   ├── test_data.py
+│   ├── test_evaluate.py
+│   ├── test_main.py
+│   ├── test_predict.py
+│   └── test_utils.py
+```
+Add test packages in setup.py
+```
+# setup.py
+test_packages = [
+    "pytest==7.1.2",
+    "pytest-cov==2.10.1"
+]
+
+# Define our package
+setup(
+    ...
+    extras_require={
+        "dev": docs_packages + style_packages + test_packages,
+        "docs": docs_packages,
+        "test": test_packages,
+    },
+)
+```
+Configuration
+```
+# Pytest
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+addopts = "--strict-markers --disable-pytest-warnings"
+markers = [
+    "training: tests that involve training",
+]
+
+# Pytest coverage Exclusions
+[tool.coverage.run]
+omit = ["app/gunicorn.py"]
+```
+**Execution**
+
+all tests
+>python3 -m pytest
+
+tests under a directory
+>python3 -m pytest tests/food  
+
+Coverage
+> python3 -m pytest --cov text_tagging --cov-report html
+
+**2. Test Data**
+
+```
+# setup.py
+test_packages = [
+    "pytest==7.1.2",
+    "pytest-cov==2.10.1",
+    "great-expectations==0.15.15"
+]
+```
+1. Projects
+
+>cd tests
+
+>great_expectations init
+
+This will set up a tests/great_expectations directory with the following structure:
+```
+tests/great_expectations/
+├── checkpoints/
+├── expectations/
+├── plugins/
+├── uncommitted/
+├── .gitignore
+└── great_expectations.yml
+```
+2. Data source
+
+The first step is to establish our datasource which tells Great Expectations where our data lives:
+>great_expectations datasource new
+```
+What data would you like Great Expectations to connect to?
+    1. Files on a filesystem (for processing with Pandas or Spark) 👈
+    2. Relational database (SQL)
+
+What are you processing your files with?
+1. Pandas 👈
+2. PySpark
+
+Enter the path of the root directory where the data files are stored: ../data
+```
+3. Suites
+
+Create expectations manually, interactively or automatically and save them as suites (a set of expectations for a particular data asset).
+
+>great_expectations suite new
+
+```
+How would you like to create your Expectation Suite?
+    1. Manually, without interacting with a sample batch of data (default)
+    2. Interactively, with a sample batch of data 👈
+    3. Automatically, using a profiler
+
+Which data asset (accessible by data connector "default_inferred_data_connector_name") would you like to use?
+    1. labeled_projects.csv
+    2. projects.csv 👈
+    3. tags.csv
+
+Name the new Expectation Suite [projects.csv.warning]: projects
+```
+Define expectations in jupyter notebook:
+```
+Table expectations:
+
+# Presence of features
+validator.expect_table_columns_to_match_ordered_list(column_list=["id", "tag"])
+
+Column expectations:
+# id
+validator.expect_column_values_to_be_unique(column="id")
+
+# tag
+validator.expect_column_values_to_not_be_null(column="tag")
+validator.expect_column_values_to_be_of_type(column="tag", type_="str")
+```
+To edit a suite, we can execute the follow CLI command:
+
+>great_expectations suite edit <SUITE_NAME>
+
+4. Checkpoints
+```
+great_expectations checkpoint new projects
+great_expectations checkpoint new tags
+great_expectations checkpoint new labeled_projects
+```
+We have to change the lines for data_asset_name (which data asset to run the checkpoint suite on) and expectation_suite_name (name of the suite to use). For example, the projects checkpoint would use the projects.csv data asset and the projects suite.
+
+```
+great_expectations checkpoint run projects
+great_expectations checkpoint run tags
+great_expectations checkpoint run labeled_projects
+```
+5. Documentation
+>great_expectations docs build
+
+**3. Test Model**
+
+The final aspect of testing ML systems involves how to test machine learning models during training, evaluation, inference and deployment. [Behavioral testing]
+
+### Makefile
+
+Let's create a target in our Makefile that will allow us to execute all of our tests with one call:
+```
+# Test
+.PHONY: test
+test:
+    pytest -m "not training"
+    cd tests && great_expectations checkpoint run projects
+    cd tests && great_expectations checkpoint run tags
+    cd tests && great_expectations checkpoint run labeled_projects
+```
+> make test
+
+
+
+# Workflow
 ```
 python main.py elt-data
 python main.py optimize --args-fp="config/args.json" --study-name="optimization" --num-trials=10
-python tmain.py train-model --args-fp="config/args.json" --experiment-name="baselines" --run-name="sgd"
+python main.py train-model --args-fp="config/args.json" --experiment-name="baselines" --run-name="sgd"
 python main.py predict-tag --text="Transfer learning with transformers for text classification."
 

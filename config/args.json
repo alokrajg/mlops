@@ -7,8 +7,8 @@
   "analyzer": "char_wb",
   "ngram_max_range": 4,
   "alpha": 0.0001,
-  "learning_rate": 0.5735762483144123,
-  "power_t": 0.25483117443036507,
+  "learning_rate": 0.11160741497018364,
+  "power_t": 0.34894698040458927,
   "num_epochs": 100,
-  "threshold": 0.675022229447811
+  "threshold": 0.681444021774906
 }

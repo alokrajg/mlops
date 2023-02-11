@@ -581,3 +581,708 @@ Ready for inference!
 INFO 2023-02-10 15:05:21,942 [root:api.py:load_artifacts:28]
 Ready for inference!
 
+INFO 2023-02-11 11:53:49,289 [root:main.py:elt_data:40]
+✅ Saved data!
+
+INFO 2023-02-11 11:53:49,503 [root:main.py:predict_tag:166]
+[
+  {
+    "input_text": "Transfer learning with transformers for text classification.",
+    "predicted_tag": "natural-language-processing"
+  }
+]
+
+INFO 2023-02-11 11:55:11,565 [root:main.py:elt_data:40]
+✅ Saved data!
+
+INFO 2023-02-11 11:55:11,788 [root:main.py:predict_tag:166]
+[
+  {
+    "input_text": "Transfer learning with transformers for text classification.",
+    "predicted_tag": "natural-language-processing"
+  }
+]
+
+INFO 2023-02-11 11:55:57,981 [root:train.py:train:76]
+Epoch: 00 | train_loss: 0.52732, val_loss: 0.66937
+
+INFO 2023-02-11 11:55:58,146 [root:train.py:train:76]
+Epoch: 10 | train_loss: 0.16341, val_loss: 0.42403
+
+INFO 2023-02-11 11:55:58,308 [root:train.py:train:76]
+Epoch: 20 | train_loss: 0.15059, val_loss: 0.41739
+
+INFO 2023-02-11 11:55:58,469 [root:train.py:train:76]
+Epoch: 30 | train_loss: 0.14744, val_loss: 0.41527
+
+INFO 2023-02-11 11:55:58,640 [root:train.py:train:76]
+Epoch: 40 | train_loss: 0.14553, val_loss: 0.41440
+
+INFO 2023-02-11 11:55:58,803 [root:train.py:train:76]
+Epoch: 50 | train_loss: 0.14481, val_loss: 0.41462
+
+INFO 2023-02-11 11:55:58,964 [root:train.py:train:76]
+Epoch: 60 | train_loss: 0.14211, val_loss: 0.41512
+
+INFO 2023-02-11 11:55:59,127 [root:train.py:train:76]
+Epoch: 70 | train_loss: 0.14242, val_loss: 0.41465
+
+INFO 2023-02-11 11:55:59,286 [root:train.py:train:76]
+Epoch: 80 | train_loss: 0.14204, val_loss: 0.41310
+
+INFO 2023-02-11 11:55:59,447 [root:train.py:train:76]
+Epoch: 90 | train_loss: 0.14040, val_loss: 0.41430
+
+INFO 2023-02-11 11:55:59,614 [root:train.py:objective:134]
+{
+  "precision": 0.9023569023569024,
+  "recall": 0.75,
+  "f1": 0.785060690943044,
+  "num_samples": 144.0
+}
+
+INFO 2023-02-11 11:55:59,773 [root:train.py:train:76]
+Epoch: 00 | train_loss: 1.06240, val_loss: 1.11254
+
+INFO 2023-02-11 11:55:59,815 [root:train.py:train:76]
+Epoch: 10 | train_loss: 0.41569, val_loss: 0.58146
+
+INFO 2023-02-11 11:55:59,857 [root:train.py:train:76]
+Epoch: 20 | train_loss: 0.29483, val_loss: 0.49616
+
+INFO 2023-02-11 11:55:59,897 [root:train.py:train:76]
+Epoch: 30 | train_loss: 0.24179, val_loss: 0.46180
+
+INFO 2023-02-11 11:55:59,938 [root:train.py:train:76]
+Epoch: 40 | train_loss: 0.21300, val_loss: 0.44399
+
+INFO 2023-02-11 11:55:59,978 [root:train.py:train:76]
+Epoch: 50 | train_loss: 0.19501, val_loss: 0.43352
+
+INFO 2023-02-11 11:56:00,018 [root:train.py:train:76]
+Epoch: 60 | train_loss: 0.18235, val_loss: 0.42720
+
+INFO 2023-02-11 11:56:00,059 [root:train.py:train:76]
+Epoch: 70 | train_loss: 0.17421, val_loss: 0.42213
+
+INFO 2023-02-11 11:56:00,099 [root:train.py:train:76]
+Epoch: 80 | train_loss: 0.16867, val_loss: 0.41872
+
+INFO 2023-02-11 11:56:00,140 [root:train.py:train:76]
+Epoch: 90 | train_loss: 0.16405, val_loss: 0.41712
+
+INFO 2023-02-11 11:56:00,181 [root:train.py:objective:134]
+{
+  "precision": 0.8902091029648574,
+  "recall": 0.7569444444444444,
+  "f1": 0.7872808552554161,
+  "num_samples": 144.0
+}
+
+INFO 2023-02-11 11:56:00,254 [root:train.py:train:76]
+Epoch: 00 | train_loss: 1.36176, val_loss: 1.36911
+
+INFO 2023-02-11 11:56:00,281 [root:train.py:train:76]
+Epoch: 10 | train_loss: 1.11268, val_loss: 1.20632
+
+INFO 2023-02-11 11:56:00,307 [root:train.py:train:76]
+Epoch: 20 | train_loss: 0.91917, val_loss: 1.09192
+
+INFO 2023-02-11 11:56:00,333 [root:train.py:train:76]
+Epoch: 30 | train_loss: 0.77879, val_loss: 1.01222
+
+INFO 2023-02-11 11:56:00,359 [root:train.py:train:76]
+Epoch: 40 | train_loss: 0.67583, val_loss: 0.95476
+
+INFO 2023-02-11 11:56:00,385 [root:train.py:train:76]
+Epoch: 50 | train_loss: 0.59848, val_loss: 0.91194
+
+INFO 2023-02-11 11:56:00,411 [root:train.py:train:76]
+Epoch: 60 | train_loss: 0.53883, val_loss: 0.87907
+
+INFO 2023-02-11 11:56:00,436 [root:train.py:train:76]
+Epoch: 70 | train_loss: 0.49175, val_loss: 0.85319
+
+INFO 2023-02-11 11:56:00,462 [root:train.py:train:76]
+Epoch: 80 | train_loss: 0.45381, val_loss: 0.83236
+
+INFO 2023-02-11 11:56:00,488 [root:train.py:train:76]
+Epoch: 90 | train_loss: 0.42269, val_loss: 0.81528
+
+INFO 2023-02-11 11:56:00,516 [root:train.py:objective:134]
+{
+  "precision": 0.8006086541800826,
+  "recall": 0.6805555555555556,
+  "f1": 0.7115358913712648,
+  "num_samples": 144.0
+}
+
+INFO 2023-02-11 11:56:00,648 [root:train.py:train:76]
+Epoch: 00 | train_loss: 1.05181, val_loss: 1.09943
+
+INFO 2023-02-11 11:56:00,698 [root:train.py:train:76]
+Epoch: 10 | train_loss: 0.38984, val_loss: 0.54849
+
+INFO 2023-02-11 11:56:00,748 [root:train.py:train:76]
+Epoch: 20 | train_loss: 0.27286, val_loss: 0.46445
+
+INFO 2023-02-11 11:56:00,797 [root:train.py:train:76]
+Epoch: 30 | train_loss: 0.22266, val_loss: 0.43084
+
+INFO 2023-02-11 11:56:00,847 [root:train.py:train:76]
+Epoch: 40 | train_loss: 0.19608, val_loss: 0.41373
+
+INFO 2023-02-11 11:56:00,897 [root:train.py:train:76]
+Epoch: 50 | train_loss: 0.17979, val_loss: 0.40395
+
+INFO 2023-02-11 11:56:00,947 [root:train.py:train:76]
+Epoch: 60 | train_loss: 0.16880, val_loss: 0.39784
+
+INFO 2023-02-11 11:56:00,997 [root:train.py:train:76]
+Epoch: 70 | train_loss: 0.16168, val_loss: 0.39334
+
+INFO 2023-02-11 11:56:01,047 [root:train.py:train:76]
+Epoch: 80 | train_loss: 0.15694, val_loss: 0.39037
+
+INFO 2023-02-11 11:56:01,098 [root:train.py:train:76]
+Epoch: 90 | train_loss: 0.15315, val_loss: 0.38886
+
+INFO 2023-02-11 11:56:01,148 [root:train.py:objective:134]
+{
+  "precision": 0.9178004535147392,
+  "recall": 0.7986111111111112,
+  "f1": 0.8265063522446623,
+  "num_samples": 144.0
+}
+
+INFO 2023-02-11 11:56:01,370 [root:train.py:train:76]
+Epoch: 00 | train_loss: 1.35682, val_loss: 1.36149
+
+INFO 2023-02-11 11:56:01,455 [root:train.py:train:76]
+Epoch: 10 | train_loss: 1.06574, val_loss: 1.11168
+
+INFO 2023-02-11 11:56:01,541 [root:train.py:train:76]
+Epoch: 20 | train_loss: 0.87688, val_loss: 0.94965
+
+INFO 2023-02-11 11:56:01,625 [root:train.py:train:76]
+Epoch: 30 | train_loss: 0.75415, val_loss: 0.84586
+
+INFO 2023-02-11 11:56:01,710 [root:train.py:train:76]
+Epoch: 40 | train_loss: 0.66800, val_loss: 0.77449
+
+INFO 2023-02-11 11:56:01,795 [root:train.py:train:76]
+Epoch: 50 | train_loss: 0.60353, val_loss: 0.72224
+
+INFO 2023-02-11 11:56:01,879 [root:train.py:train:76]
+Epoch: 60 | train_loss: 0.55295, val_loss: 0.68205
+
+INFO 2023-02-11 11:56:01,963 [root:train.py:train:76]
+Epoch: 70 | train_loss: 0.51199, val_loss: 0.65010
+
+INFO 2023-02-11 11:56:02,048 [root:train.py:train:76]
+Epoch: 80 | train_loss: 0.47799, val_loss: 0.62401
+
+INFO 2023-02-11 11:56:02,133 [root:train.py:train:76]
+Epoch: 90 | train_loss: 0.44917, val_loss: 0.60226
+
+INFO 2023-02-11 11:56:02,216 [root:train.py:objective:134]
+{
+  "precision": 0.886893539467069,
+  "recall": 0.75,
+  "f1": 0.782917088588174,
+  "num_samples": 144.0
+}
+
+INFO 2023-02-11 11:56:02,803 [root:train.py:train:76]
+Epoch: 00 | train_loss: 1.03033, val_loss: 1.07717
+
+INFO 2023-02-11 11:56:02,992 [root:train.py:train:76]
+Epoch: 10 | train_loss: 0.32328, val_loss: 0.52887
+
+INFO 2023-02-11 11:56:03,180 [root:train.py:train:76]
+Epoch: 20 | train_loss: 0.22427, val_loss: 0.46396
+
+INFO 2023-02-11 11:56:03,368 [root:train.py:train:76]
+Epoch: 30 | train_loss: 0.18929, val_loss: 0.44163
+
+INFO 2023-02-11 11:56:03,556 [root:train.py:train:76]
+Epoch: 40 | train_loss: 0.17356, val_loss: 0.43186
+
+INFO 2023-02-11 11:56:03,747 [root:train.py:train:76]
+Epoch: 50 | train_loss: 0.16540, val_loss: 0.42732
+
+INFO 2023-02-11 11:56:03,935 [root:train.py:train:76]
+Epoch: 60 | train_loss: 0.16050, val_loss: 0.42495
+
+INFO 2023-02-11 11:56:04,121 [root:train.py:train:76]
+Epoch: 70 | train_loss: 0.15766, val_loss: 0.42364
+
+INFO 2023-02-11 11:56:04,309 [root:train.py:train:76]
+Epoch: 80 | train_loss: 0.15580, val_loss: 0.42274
+
+INFO 2023-02-11 11:56:04,496 [root:train.py:train:76]
+Epoch: 90 | train_loss: 0.15423, val_loss: 0.42251
+
+INFO 2023-02-11 11:56:04,677 [root:train.py:objective:134]
+{
+  "precision": 0.9014550264550265,
+  "recall": 0.7430555555555556,
+  "f1": 0.7795507746263348,
+  "num_samples": 144.0
+}
+
+INFO 2023-02-11 11:56:04,765 [root:train.py:train:76]
+Epoch: 00 | train_loss: 1.35435, val_loss: 1.36545
+
+INFO 2023-02-11 11:56:04,794 [root:train.py:train:76]
+Epoch: 10 | train_loss: 1.04101, val_loss: 1.17287
+
+INFO 2023-02-11 11:56:04,823 [root:train.py:train:76]
+Epoch: 20 | train_loss: 0.82361, val_loss: 1.04901
+
+INFO 2023-02-11 11:56:04,853 [root:train.py:train:76]
+Epoch: 30 | train_loss: 0.67975, val_loss: 0.96873
+
+INFO 2023-02-11 11:56:04,882 [root:train.py:train:76]
+Epoch: 40 | train_loss: 0.58114, val_loss: 0.91405
+
+INFO 2023-02-11 11:56:04,911 [root:train.py:train:76]
+Epoch: 50 | train_loss: 0.51055, val_loss: 0.87498
+
+INFO 2023-02-11 11:56:04,940 [root:train.py:train:76]
+Epoch: 60 | train_loss: 0.45799, val_loss: 0.84588
+
+INFO 2023-02-11 11:56:04,969 [root:train.py:train:76]
+Epoch: 70 | train_loss: 0.41763, val_loss: 0.82350
+
+INFO 2023-02-11 11:56:04,998 [root:train.py:train:76]
+Epoch: 80 | train_loss: 0.38585, val_loss: 0.80580
+
+INFO 2023-02-11 11:56:05,027 [root:train.py:train:76]
+Epoch: 90 | train_loss: 0.36031, val_loss: 0.79153
+
+INFO 2023-02-11 11:56:05,058 [root:train.py:objective:134]
+{
+  "precision": 0.79786568483377,
+  "recall": 0.6875,
+  "f1": 0.715842790107496,
+  "num_samples": 144.0
+}
+
+INFO 2023-02-11 11:56:05,179 [root:train.py:train:76]
+Epoch: 00 | train_loss: 1.01552, val_loss: 1.18154
+
+INFO 2023-02-11 11:56:05,218 [root:train.py:train:76]
+Epoch: 10 | train_loss: 0.29946, val_loss: 0.78344
+
+INFO 2023-02-11 11:56:05,257 [root:train.py:train:76]
+Epoch: 20 | train_loss: 0.23518, val_loss: 0.74396
+
+INFO 2023-02-11 11:56:05,297 [root:train.py:train:76]
+Epoch: 30 | train_loss: 0.21998, val_loss: 0.73288
+
+INFO 2023-02-11 11:56:05,337 [root:train.py:train:76]
+Epoch: 40 | train_loss: 0.21519, val_loss: 0.72889
+
+INFO 2023-02-11 11:56:05,377 [root:train.py:train:76]
+Epoch: 50 | train_loss: 0.21338, val_loss: 0.72706
+
+INFO 2023-02-11 11:56:05,417 [root:train.py:train:76]
+Epoch: 60 | train_loss: 0.21243, val_loss: 0.72590
+
+INFO 2023-02-11 11:56:05,456 [root:train.py:train:76]
+Epoch: 70 | train_loss: 0.21210, val_loss: 0.72529
+
+INFO 2023-02-11 11:56:05,497 [root:train.py:train:76]
+Epoch: 80 | train_loss: 0.21186, val_loss: 0.72484
+
+INFO 2023-02-11 11:56:05,537 [root:train.py:train:76]
+Epoch: 90 | train_loss: 0.21140, val_loss: 0.72457
+
+INFO 2023-02-11 11:56:05,579 [root:train.py:objective:134]
+{
+  "precision": 0.811613475177305,
+  "recall": 0.7083333333333334,
+  "f1": 0.7364935171858006,
+  "num_samples": 144.0
+}
+
+INFO 2023-02-11 11:56:05,680 [root:train.py:train:76]
+Epoch: 00 | train_loss: 1.34872, val_loss: 1.36397
+
+INFO 2023-02-11 11:56:05,714 [root:train.py:train:76]
+Epoch: 10 | train_loss: 0.99066, val_loss: 1.15753
+
+INFO 2023-02-11 11:56:05,747 [root:train.py:train:76]
+Epoch: 20 | train_loss: 0.76218, val_loss: 1.03065
+
+INFO 2023-02-11 11:56:05,780 [root:train.py:train:76]
+Epoch: 30 | train_loss: 0.62018, val_loss: 0.95194
+
+INFO 2023-02-11 11:56:05,812 [root:train.py:train:76]
+Epoch: 40 | train_loss: 0.52683, val_loss: 0.90005
+
+INFO 2023-02-11 11:56:05,846 [root:train.py:train:76]
+Epoch: 50 | train_loss: 0.46185, val_loss: 0.86378
+
+INFO 2023-02-11 11:56:05,879 [root:train.py:train:76]
+Epoch: 60 | train_loss: 0.41447, val_loss: 0.83718
+
+INFO 2023-02-11 11:56:05,912 [root:train.py:train:76]
+Epoch: 70 | train_loss: 0.37873, val_loss: 0.81697
+
+INFO 2023-02-11 11:56:05,946 [root:train.py:train:76]
+Epoch: 80 | train_loss: 0.35102, val_loss: 0.80119
+
+INFO 2023-02-11 11:56:05,979 [root:train.py:train:76]
+Epoch: 90 | train_loss: 0.32906, val_loss: 0.78858
+
+INFO 2023-02-11 11:56:06,015 [root:train.py:objective:134]
+{
+  "precision": 0.799564857410602,
+  "recall": 0.6944444444444444,
+  "f1": 0.7213056761599426,
+  "num_samples": 144.0
+}
+
+INFO 2023-02-11 11:56:06,152 [root:train.py:train:76]
+Epoch: 00 | train_loss: 1.15352, val_loss: 1.19250
+
+INFO 2023-02-11 11:56:06,209 [root:train.py:train:76]
+Epoch: 10 | train_loss: 0.47555, val_loss: 0.63114
+
+INFO 2023-02-11 11:56:06,266 [root:train.py:train:76]
+Epoch: 20 | train_loss: 0.33256, val_loss: 0.52344
+
+INFO 2023-02-11 11:56:06,322 [root:train.py:train:76]
+Epoch: 30 | train_loss: 0.26717, val_loss: 0.47708
+
+INFO 2023-02-11 11:56:06,379 [root:train.py:train:76]
+Epoch: 40 | train_loss: 0.23027, val_loss: 0.45172
+
+INFO 2023-02-11 11:56:06,436 [root:train.py:train:76]
+Epoch: 50 | train_loss: 0.20675, val_loss: 0.43623
+
+INFO 2023-02-11 11:56:06,493 [root:train.py:train:76]
+Epoch: 60 | train_loss: 0.19047, val_loss: 0.42587
+
+INFO 2023-02-11 11:56:06,549 [root:train.py:train:76]
+Epoch: 70 | train_loss: 0.17923, val_loss: 0.41851
+
+INFO 2023-02-11 11:56:06,607 [root:train.py:train:76]
+Epoch: 80 | train_loss: 0.17120, val_loss: 0.41324
+
+INFO 2023-02-11 11:56:06,664 [root:train.py:train:76]
+Epoch: 90 | train_loss: 0.16496, val_loss: 0.40968
+
+INFO 2023-02-11 11:56:06,721 [root:train.py:objective:134]
+{
+  "precision": 0.9116161616161617,
+  "recall": 0.7569444444444444,
+  "f1": 0.7915787915787916,
+  "num_samples": 144.0
+}
+
+INFO 2023-02-11 11:56:06,736 [root:main.py:optimize:121]
+
+Best value (f1): 0.8265063522446623
+
+INFO 2023-02-11 11:56:06,737 [root:main.py:optimize:122]
+Best hyperparameters: {
+  "analyzer": "char_wb",
+  "ngram_max_range": 4,
+  "learning_rate": 0.11160741497018364,
+  "power_t": 0.34894698040458927
+}
+
+INFO 2023-02-11 11:56:41,523 [root:main.py:train_model:65]
+Run ID: 9c125ef8056e47efbdedb6f1f53a8a46
+
+INFO 2023-02-11 11:56:41,651 [root:train.py:train:76]
+Epoch: 00 | train_loss: 1.05181, val_loss: 1.09943
+
+INFO 2023-02-11 11:56:41,707 [root:train.py:train:76]
+Epoch: 10 | train_loss: 0.38984, val_loss: 0.54849
+
+INFO 2023-02-11 11:56:41,764 [root:train.py:train:76]
+Epoch: 20 | train_loss: 0.27286, val_loss: 0.46445
+
+INFO 2023-02-11 11:56:41,819 [root:train.py:train:76]
+Epoch: 30 | train_loss: 0.22266, val_loss: 0.43084
+
+INFO 2023-02-11 11:56:41,875 [root:train.py:train:76]
+Epoch: 40 | train_loss: 0.19608, val_loss: 0.41373
+
+INFO 2023-02-11 11:56:41,931 [root:train.py:train:76]
+Epoch: 50 | train_loss: 0.17979, val_loss: 0.40395
+
+INFO 2023-02-11 11:56:41,986 [root:train.py:train:76]
+Epoch: 60 | train_loss: 0.16880, val_loss: 0.39784
+
+INFO 2023-02-11 11:56:42,040 [root:train.py:train:76]
+Epoch: 70 | train_loss: 0.16168, val_loss: 0.39334
+
+INFO 2023-02-11 11:56:42,096 [root:train.py:train:76]
+Epoch: 80 | train_loss: 0.15694, val_loss: 0.39037
+
+INFO 2023-02-11 11:56:42,152 [root:train.py:train:76]
+Epoch: 90 | train_loss: 0.15315, val_loss: 0.38886
+
+INFO 2023-02-11 11:56:42,215 [root:main.py:train_model:68]
+{
+  "overall": {
+    "precision": 0.9178004535147392,
+    "recall": 0.7986111111111112,
+    "f1": 0.8265063522446623,
+    "num_samples": 144.0
+  },
+  "class": {
+    "computer-vision": {
+      "precision": 1.0,
+      "recall": 0.7037037037037037,
+      "f1": 0.8260869565217391,
+      "num_samples": 54.0
+    },
+    "mlops": {
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571428571428571,
+      "num_samples": 12.0
+    },
+    "natural-language-processing": {
+      "precision": 1.0,
+      "recall": 0.8275862068965517,
+      "f1": 0.9056603773584906,
+      "num_samples": 58.0
+    },
+    "other": {
+      "precision": 0.40816326530612246,
+      "recall": 1.0,
+      "f1": 0.5797101449275363,
+      "num_samples": 20.0
+    }
+  },
+  "slices": {
+    "nlp_cnn": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "num_samples": 1
+    },
+    "short_text": {
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1": 0.8000000000000002,
+      "num_samples": 5
+    }
+  }
+}
+
+INFO 2023-02-11 11:56:42,252 [root:file_util.py:copy_file:137]
+copying /var/folders/6w/rwxjjfl12yg5rxnfzhg2rrp40000gn/T/tmp5beukjpj/args.json -> /Users/alokrajgupta/ml-web/mlops/stores/model/762791503755819567/9c125ef8056e47efbdedb6f1f53a8a46/artifacts
+
+INFO 2023-02-11 11:56:42,253 [root:file_util.py:copy_file:137]
+copying /var/folders/6w/rwxjjfl12yg5rxnfzhg2rrp40000gn/T/tmp5beukjpj/model.pkl -> /Users/alokrajgupta/ml-web/mlops/stores/model/762791503755819567/9c125ef8056e47efbdedb6f1f53a8a46/artifacts
+
+INFO 2023-02-11 11:56:42,254 [root:file_util.py:copy_file:137]
+copying /var/folders/6w/rwxjjfl12yg5rxnfzhg2rrp40000gn/T/tmp5beukjpj/performance.json -> /Users/alokrajgupta/ml-web/mlops/stores/model/762791503755819567/9c125ef8056e47efbdedb6f1f53a8a46/artifacts
+
+INFO 2023-02-11 11:56:42,254 [root:file_util.py:copy_file:137]
+copying /var/folders/6w/rwxjjfl12yg5rxnfzhg2rrp40000gn/T/tmp5beukjpj/label_encoder.json -> /Users/alokrajgupta/ml-web/mlops/stores/model/762791503755819567/9c125ef8056e47efbdedb6f1f53a8a46/artifacts
+
+INFO 2023-02-11 11:56:42,255 [root:file_util.py:copy_file:137]
+copying /var/folders/6w/rwxjjfl12yg5rxnfzhg2rrp40000gn/T/tmp5beukjpj/vectorizer.pkl -> /Users/alokrajgupta/ml-web/mlops/stores/model/762791503755819567/9c125ef8056e47efbdedb6f1f53a8a46/artifacts
+
+INFO 2023-02-11 11:56:48,870 [root:main.py:elt_data:40]
+✅ Saved data!
+
+INFO 2023-02-11 11:56:49,085 [root:main.py:predict_tag:166]
+[
+  {
+    "input_text": "Transfer learning with transformers for text classification.",
+    "predicted_tag": "natural-language-processing"
+  }
+]
+
+INFO 2023-02-11 12:07:41,522 [root:main.py:elt_data:40]
+✅ Saved data!
+
+INFO 2023-02-11 12:07:41,820 [root:main.py:predict_tag:166]
+[
+  {
+    "input_text": "Transfer learning with transformers for text classification.",
+    "predicted_tag": "natural-language-processing"
+  }
+]
+
+INFO 2023-02-11 12:10:45,724 [root:main.py:elt_data:40]
+✅ Saved data!
+
+INFO 2023-02-11 12:10:45,810 [root:main.py:train_model:65]
+Run ID: 9217eb47f0154813883703235808f553
+
+INFO 2023-02-11 12:10:45,846 [root:train.py:train:76]
+Epoch: 00 | train_loss: 0.65307, val_loss: 0.67170
+
+INFO 2023-02-11 12:10:45,867 [root:main.py:train_model:68]
+{
+  "overall": {
+    "precision": 0.8169312169312168,
+    "recall": 0.8,
+    "f1": 0.7923444976076556,
+    "num_samples": 30.0
+  },
+  "class": {
+    "natural-language-processing": {
+      "precision": 0.8888888888888888,
+      "recall": 0.6153846153846154,
+      "f1": 0.7272727272727274,
+      "num_samples": 13.0
+    },
+    "other": {
+      "precision": 0.7619047619047619,
+      "recall": 0.9411764705882353,
+      "f1": 0.8421052631578947,
+      "num_samples": 17.0
+    }
+  },
+  "slices": {}
+}
+
+INFO 2023-02-11 12:10:45,891 [root:file_util.py:copy_file:137]
+copying /var/folders/6w/rwxjjfl12yg5rxnfzhg2rrp40000gn/T/tmp4bpr55fq/args.json -> /Users/alokrajgupta/ml-web/mlops/stores/model/767964735007127876/9217eb47f0154813883703235808f553/artifacts
+
+INFO 2023-02-11 12:10:45,892 [root:file_util.py:copy_file:137]
+copying /var/folders/6w/rwxjjfl12yg5rxnfzhg2rrp40000gn/T/tmp4bpr55fq/model.pkl -> /Users/alokrajgupta/ml-web/mlops/stores/model/767964735007127876/9217eb47f0154813883703235808f553/artifacts
+
+INFO 2023-02-11 12:10:45,893 [root:file_util.py:copy_file:137]
+copying /var/folders/6w/rwxjjfl12yg5rxnfzhg2rrp40000gn/T/tmp4bpr55fq/performance.json -> /Users/alokrajgupta/ml-web/mlops/stores/model/767964735007127876/9217eb47f0154813883703235808f553/artifacts
+
+INFO 2023-02-11 12:10:45,894 [root:file_util.py:copy_file:137]
+copying /var/folders/6w/rwxjjfl12yg5rxnfzhg2rrp40000gn/T/tmp4bpr55fq/label_encoder.json -> /Users/alokrajgupta/ml-web/mlops/stores/model/767964735007127876/9217eb47f0154813883703235808f553/artifacts
+
+INFO 2023-02-11 12:10:45,896 [root:file_util.py:copy_file:137]
+copying /var/folders/6w/rwxjjfl12yg5rxnfzhg2rrp40000gn/T/tmp4bpr55fq/vectorizer.pkl -> /Users/alokrajgupta/ml-web/mlops/stores/model/767964735007127876/9217eb47f0154813883703235808f553/artifacts
+
+INFO 2023-02-11 12:10:45,929 [root:train.py:train:76]
+Epoch: 00 | train_loss: 0.54013, val_loss: 0.64684
+
+INFO 2023-02-11 12:10:45,945 [root:train.py:objective:134]
+{
+  "precision": 0.8920634920634921,
+  "recall": 0.8666666666666667,
+  "f1": 0.8615629984051036,
+  "num_samples": 30.0
+}
+
+INFO 2023-02-11 12:10:45,960 [root:main.py:optimize:121]
+
+Best value (f1): 0.8615629984051036
+
+INFO 2023-02-11 12:10:45,961 [root:main.py:optimize:122]
+Best hyperparameters: {
+  "analyzer": "word",
+  "ngram_max_range": 4,
+  "learning_rate": 0.5519533764303033,
+  "power_t": 0.2774599341445897
+}
+
+INFO 2023-02-11 12:10:46,037 [root:main.py:predict_tag:166]
+[
+  {
+    "input_text": "Transfer learning with transformers for text classification.",
+    "predicted_tag": "natural-language-processing"
+  }
+]
+
+INFO 2023-02-11 12:10:54,226 [root:main.py:elt_data:40]
+✅ Saved data!
+
+INFO 2023-02-11 12:10:54,296 [root:main.py:train_model:65]
+Run ID: 15b5a60a3ed34495a70d4ece566e0f29
+
+INFO 2023-02-11 12:10:54,316 [root:train.py:train:76]
+Epoch: 00 | train_loss: 0.54013, val_loss: 0.64684
+
+INFO 2023-02-11 12:10:54,331 [root:main.py:train_model:68]
+{
+  "overall": {
+    "precision": 0.8920634920634921,
+    "recall": 0.8666666666666667,
+    "f1": 0.8615629984051036,
+    "num_samples": 30.0
+  },
+  "class": {
+    "natural-language-processing": {
+      "precision": 1.0,
+      "recall": 0.6923076923076923,
+      "f1": 0.8181818181818181,
+      "num_samples": 13.0
+    },
+    "other": {
+      "precision": 0.8095238095238095,
+      "recall": 1.0,
+      "f1": 0.8947368421052632,
+      "num_samples": 17.0
+    }
+  },
+  "slices": {}
+}
+
+INFO 2023-02-11 12:10:54,350 [root:file_util.py:copy_file:137]
+copying /var/folders/6w/rwxjjfl12yg5rxnfzhg2rrp40000gn/T/tmpusgy0mvi/args.json -> /Users/alokrajgupta/ml-web/mlops/stores/model/401820454495517731/15b5a60a3ed34495a70d4ece566e0f29/artifacts
+
+INFO 2023-02-11 12:10:54,351 [root:file_util.py:copy_file:137]
+copying /var/folders/6w/rwxjjfl12yg5rxnfzhg2rrp40000gn/T/tmpusgy0mvi/model.pkl -> /Users/alokrajgupta/ml-web/mlops/stores/model/401820454495517731/15b5a60a3ed34495a70d4ece566e0f29/artifacts
+
+INFO 2023-02-11 12:10:54,351 [root:file_util.py:copy_file:137]
+copying /var/folders/6w/rwxjjfl12yg5rxnfzhg2rrp40000gn/T/tmpusgy0mvi/performance.json -> /Users/alokrajgupta/ml-web/mlops/stores/model/401820454495517731/15b5a60a3ed34495a70d4ece566e0f29/artifacts
+
+INFO 2023-02-11 12:10:54,352 [root:file_util.py:copy_file:137]
+copying /var/folders/6w/rwxjjfl12yg5rxnfzhg2rrp40000gn/T/tmpusgy0mvi/label_encoder.json -> /Users/alokrajgupta/ml-web/mlops/stores/model/401820454495517731/15b5a60a3ed34495a70d4ece566e0f29/artifacts
+
+INFO 2023-02-11 12:10:54,353 [root:file_util.py:copy_file:137]
+copying /var/folders/6w/rwxjjfl12yg5rxnfzhg2rrp40000gn/T/tmpusgy0mvi/vectorizer.pkl -> /Users/alokrajgupta/ml-web/mlops/stores/model/401820454495517731/15b5a60a3ed34495a70d4ece566e0f29/artifacts
+
+INFO 2023-02-11 12:10:54,443 [root:train.py:train:76]
+Epoch: 00 | train_loss: 0.65390, val_loss: 0.67174
+
+INFO 2023-02-11 12:10:54,456 [root:train.py:objective:134]
+{
+  "precision": 0.8347222222222223,
+  "recall": 0.7666666666666667,
+  "f1": 0.7436029097133077,
+  "num_samples": 30.0
+}
+
+INFO 2023-02-11 12:10:54,469 [root:main.py:optimize:121]
+
+Best value (f1): 0.7436029097133077
+
+INFO 2023-02-11 12:10:54,470 [root:main.py:optimize:122]
+Best hyperparameters: {
+  "analyzer": "char",
+  "ngram_max_range": 8,
+  "learning_rate": 0.09113087931360742,
+  "power_t": 0.43883666582542713
+}
+
+INFO 2023-02-11 12:10:54,507 [root:main.py:predict_tag:166]
+[
+  {
+    "input_text": "Transfer learning with transformers for text classification.",
+    "predicted_tag": "natural-language-processing"
+  }
+]
+
+INFO 2023-02-11 15:57:13,291 [root:main.py:elt_data:40]
+✅ Saved data!
+
+INFO 2023-02-11 15:57:13,343 [root:main.py:predict_tag:166]
+[
+  {
+    "input_text": "Transfer learning with transformers for text classification.",
+    "predicted_tag": "natural-language-processing"
+  }
+]
+
