@@ -6,11 +6,11 @@ from typing import Dict
 
 from fastapi import FastAPI, Request
 
+import main
 from app.schemas import PredictPayload
 from config import config
 from config.config import logger
 from text_tagging import predict
-import main
 
 # Define application
 app = FastAPI(

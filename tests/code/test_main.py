@@ -4,8 +4,8 @@ import mlflow
 import pytest
 from typer.testing import CliRunner
 
-from config import config
 import main
+from config import config
 from main import app
 
 runner = CliRunner()
