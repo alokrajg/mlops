@@ -1275,3 +1275,14 @@ INFO 2023-02-11 12:10:54,507 [root:main.py:predict_tag:166]
   }
 ]
 
+INFO 2023-02-11 15:57:13,291 [root:main.py:elt_data:40]
+✅ Saved data!
+
+INFO 2023-02-11 15:57:13,343 [root:main.py:predict_tag:166]
+[
+  {
+    "input_text": "Transfer learning with transformers for text classification.",
+    "predicted_tag": "natural-language-processing"
+  }
+]
+

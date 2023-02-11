@@ -424,6 +424,26 @@ great_expectations checkpoint run labeled_projects
 5. Documentation
 >great_expectations docs build
 
+**3. Test Model**
+
+The final aspect of testing ML systems involves how to test machine learning models during training, evaluation, inference and deployment. [Behavioral testing]
+
+### Makefile
+
+Let's create a target in our Makefile that will allow us to execute all of our tests with one call:
+```
+# Test
+.PHONY: test
+test:
+    pytest -m "not training"
+    cd tests && great_expectations checkpoint run projects
+    cd tests && great_expectations checkpoint run tags
+    cd tests && great_expectations checkpoint run labeled_projects
+```
+> make test
+
+
+
 # Workflow
 ```
 python main.py elt-data
