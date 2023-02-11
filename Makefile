@@ -21,6 +21,10 @@ style:
 venv:
 	# conda create -n env_name python=3.9
 	# conda activate env_name
+
+# Project
+.ONESHELL:
+project:
 	python3 -m pip install --upgrade pip setuptools wheel && \
 	python3 -m pip install -e ".[dev]"
 
