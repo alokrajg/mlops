@@ -2,9 +2,9 @@ from pathlib import Path
 
 import pytest
 
+import main
 from config import config
 from text_tagging import predict
-import main
 
 
 @pytest.fixture(scope="module")

@@ -6,7 +6,7 @@ import numpy as np
 
 def load_dict(filepath):
     """Load a dictionary from a JSON's filepath."""
-    with open(filepath, "r") as fp:
+    with open(filepath) as fp:
         d = json.load(fp)
     return d
 

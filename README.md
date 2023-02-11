@@ -321,7 +321,7 @@ all tests
 >python3 -m pytest
 
 tests under a directory
->python3 -m pytest tests/food  
+>python3 -m pytest tests/food
 
 Coverage
 > python3 -m pytest --cov text_tagging --cov-report html
@@ -447,4 +447,3 @@ python main.py elt-data
 python main.py optimize --args-fp="config/args.json" --study-name="optimization" --num-trials=10
 python main.py train-model --args-fp="config/args.json" --experiment-name="baselines" --run-name="sgd"
 python main.py predict-tag --text="Transfer learning with transformers for text classification."
-
