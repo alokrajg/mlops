@@ -264,16 +264,13 @@ app/
 
 ## 10. Testing
 **1. Test Code**
-
->mkdir tests
-
->cd tests
-
->mkdir code
-
->touch <SCRIPTS>
-
->cd ../
+```
+mkdir tests
+cd tests
+mkdir code
+touch <SCRIPTS>
+cd ../
+```
 
 test directory
 ```
