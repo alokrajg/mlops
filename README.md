@@ -439,7 +439,69 @@ test:
 ```
 > make test
 
+## 11. Pre-commit
+Using the pre-commit git hooks to ensure checks before committing.
+To help us manage all these important steps, we can use pre-commit hooks, which will automatically be triggered when we try to perform a commit.
 
+1. Install
+```
+# setup.py
+setup(
+    ...
+    extras_require={
+        "dev": docs_packages + style_packages + test_packages + ["pre-commit==2.19.0"],
+        "docs": docs_packages,
+        "test": test_packages,
+    },
+)
+```
+2. Config
+```
+# Simple config
+pre-commit sample-config > .pre-commit-config.yaml
+cat .pre-commit-config.yaml
+```
+3. Hooks
+
+* Built-in
+```
+# Inside .pre-commit-config.yaml
+...
+-   id: check-added-large-files
+    args: ['--maxkb=1000']
+    exclude: "notebooks/text_tagging.ipynb"
+...
+```
+* Custom
+```
+# Inside .pre-commit-config.yaml
+...
+-   repo: https://github.com/psf/black
+    rev: 20.8b1
+    hooks:
+    -   id: black
+        args: []
+        files: .
+...
+```
+* Local
+```
+# Inside .pre-commit-config.yaml
+...
+- repo: local
+  hooks:
+    - id: clean
+      name: clean
+      entry: make
+      args: ["clean"]
+      language: system
+      pass_filenames: false
+```
+4. Commit
+```
+git add .
+git commit -m <MESSAGE>
+```
 
 # Workflow
 ```
