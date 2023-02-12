@@ -5,6 +5,7 @@
 
 ## 2. Install required python packages
 > pip install -r requirement.txt
+check cicd
 
 ## 3. Configurations
 
