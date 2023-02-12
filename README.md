@@ -600,6 +600,32 @@ docker stop $(docker ps -a -q)  # stop all containers
 docker rm $(docker ps -a -q)    # remove all containers
 ```
 
+## 14. Web-app (Streamlit)
+Creating an interactive dashboard to visually inspect our application using Streamlit.
+1. Set up
+```
+# Setup
+pip install streamlit==1.10.0
+mkdir streamlit
+touch streamlit/app.py
+streamlit run streamlit/app.py
+```
+This will automatically open up the streamlit dashboard for us on http://localhost:8501.
+
+To see these changes on our dashboard, we can refresh our dashboard page (press R) or set it Always rerun (press A).
+
+2. Sections
+
+We'll start by outlining the sections we want to have in our dashboard by editing our streamlit/app.py script:
+
+3. Caching
+```
+@st.cache()
+def load_data():
+    projects_fp = Path(config.DATA_DIR, "labeled_projects.csv")
+    df = pd.read_csv(projects_fp)
+    return df
+```
 
 # Workflow
 ```
