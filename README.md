@@ -627,6 +627,75 @@ def load_data():
     return df
 ```
 
+## 15. CI/CD for Machine Learning
+Using workflows to establish continuous integration and delivery pipelines to reliably iterate on our application
+
+**GitHub Actions**
+![image](https://user-images.githubusercontent.com/24756965/218313695-407d931f-e59a-45f9-806d-117a5df5ff2b.png)
+
+**Components**
+![image](https://user-images.githubusercontent.com/24756965/218313750-4c0834ac-1174-4921-b116-bf06663dabdc.png)
+
+**Workflows**
+
+With GitHub Actions, we are creating automatic workflows to do something for us. We'll start by creating a .github/workflows directory to organize all of our workflows.
+```
+mkdir -p .github/workflows
+touch .github/workflows/testing.yml
+touch .github/workflows/documentation.yml
+```
+1. Events
+
+Workflows are triggered by an event, which can be something that occurs on a schedule (cron), webhook or manually. In our application, we'll be using the push and pull request webhook events to run the testing workflow when someone directly pushes or submits a PR to the main branch.
+
+```
+# .github/workflows/testing.yml
+on:
+  push:
+    branches:
+    - main
+    - master
+  pull_request:
+    branches:
+    - main
+    - master
+```
+2. Jobs
+
+Once the event is triggered, a set of jobs run on a runner, which is the application that runs the job using a specific operating system. Our first (and only) job is test-code which runs on the latest version of ubuntu.
+```
+# .github/workflows/testing.yml
+jobs:
+  test-code:
+    runs-on: ubuntu-latest
+```
+3. Steps
+
+Each job contains a series of steps which are executed in order. Each step has a name, as well as actions to use from the GitHub Action marketplace or commands we want to run. For the test-code job, the steps are to checkout the repo, install the necessary dependencies and run tests.
+```
+# .github/workflows/testing.yml
+jobs:
+  test-code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7.13
+      - name: Caching
+        uses: actions/cache@v2
+        with:
+          path: $/{/{ env.pythonLocation /}/}
+          key: $/{/{ env.pythonLocation /}/}-$/{/{ hashFiles('setup.py') /}/}-$/{/{ hashFiles('requirements.txt') /}/}
+      - name: Install dependencies
+        run: |
+          python3 -m pip install -e ".[test]" --no-cache-dir
+      - name: Execute tests
+        run: pytest tests/tagifai --ignore tests/code/test_main.py --ignore tests/code/test_data.py
+```
+
 # Workflow
 ```
 python main.py elt-data
