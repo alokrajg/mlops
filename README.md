@@ -580,6 +580,25 @@ dvc:
 	dvc add data/labeled_projects.csv
 	dvc push
 ```
+## 13. Docker
+
+Packaging our application into reproducible and scalable containers.
+
+1. Dockerfile
+>touch Dockerfile
+
+2. Build images
+>docker build -t text_tagging:latest -f Dockerfile .
+
+3. Run containers
+>docker run -p 8000:8000 --name text_tagging text_tagging:latest
+
+```
+docker stop <CONTAINER_ID>      # stop a running container
+docker rm <CONTAINER_ID>        # remove a container
+docker stop $(docker ps -a -q)  # stop all containers
+docker rm $(docker ps -a -q)    # remove all containers
+```
 
 
 # Workflow
