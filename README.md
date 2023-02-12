@@ -1,4 +1,4 @@
-check cicd
+check cicd t
 ## 1. Create creating a virtual/conda environment
 > conda create -n env_name python=3.9
 
