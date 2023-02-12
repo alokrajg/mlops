@@ -1435,3 +1435,147 @@ INFO 2023-02-11 18:17:41,438 [root:main.py:predict_tag:166]
   }
 ]
 
+INFO 2023-02-12 16:54:31,278 [root:main.py:predict_tag:166]
+[
+  {
+    "input_text": "Transfer learning with transformers for text classification.",
+    "predicted_tag": "natural-language-processing"
+  }
+]
+
+INFO 2023-02-12 16:54:43,777 [root:main.py:predict_tag:166]
+[
+  {
+    "input_text": "NLP",
+    "predicted_tag": "natural-language-processing"
+  }
+]
+
+INFO 2023-02-12 16:54:54,377 [root:main.py:predict_tag:166]
+[
+  {
+    "input_text": "extract",
+    "predicted_tag": "other"
+  }
+]
+
+INFO 2023-02-12 16:55:03,680 [root:main.py:predict_tag:166]
+[
+  {
+    "input_text": "extract vicion",
+    "predicted_tag": "other"
+  }
+]
+
+INFO 2023-02-12 16:55:09,949 [root:main.py:predict_tag:166]
+[
+  {
+    "input_text": "extract vision",
+    "predicted_tag": "computer-vision"
+  }
+]
+
+INFO 2023-02-12 17:03:20,337 [root:main.py:predict_tag:166]
+[
+  {
+    "input_text": "extract vision",
+    "predicted_tag": "computer-vision"
+  }
+]
+
+INFO 2023-02-12 17:10:51,501 [root:main.py:predict_tag:166]
+[
+  {
+    "input_text": "Transfer learning with transformers for text classification.",
+    "predicted_tag": "natural-language-processing"
+  }
+]
+
+INFO 2023-02-12 17:14:01,468 [root:main.py:predict_tag:166]
+[
+  {
+    "input_text": "Transfer learning with transformers for text classification.",
+    "predicted_tag": "natural-language-processing"
+  }
+]
+
+INFO 2023-02-12 17:14:01,856 [root:main.py:predict_tag:166]
+[
+  {
+    "input_text": "Transfer learning with transformers for text classification.",
+    "predicted_tag": "natural-language-processing"
+  }
+]
+
+INFO 2023-02-12 17:28:43,684 [root:main.py:predict_tag:166]
+[
+  {
+    "input_text": "Transfer learning with transformers for text classification.",
+    "predicted_tag": "natural-language-processing"
+  }
+]
+
+INFO 2023-02-12 17:29:04,483 [root:main.py:predict_tag:166]
+[
+  {
+    "input_text": "Transfer learning with transformers for text classification.",
+    "predicted_tag": "natural-language-processing"
+  }
+]
+
+INFO 2023-02-12 17:29:18,756 [root:main.py:predict_tag:166]
+[
+  {
+    "input_text": "Transfer learning with transformers for text classification.",
+    "predicted_tag": "natural-language-processing"
+  }
+]
+
+INFO 2023-02-12 17:31:26,757 [root:main.py:predict_tag:166]
+[
+  {
+    "input_text": "Transfer learning with transformers for text classification.",
+    "predicted_tag": "natural-language-processing"
+  }
+]
+
+INFO 2023-02-12 17:32:09,030 [root:main.py:predict_tag:166]
+[
+  {
+    "input_text": "Transfer learning with transformers for text classification.",
+    "predicted_tag": "natural-language-processing"
+  }
+]
+
+INFO 2023-02-12 17:32:09,425 [root:main.py:predict_tag:166]
+[
+  {
+    "input_text": "Transfer learning with transformers for text classification.",
+    "predicted_tag": "natural-language-processing"
+  }
+]
+
+INFO 2023-02-12 17:34:18,380 [root:main.py:predict_tag:166]
+[
+  {
+    "input_text": "Transfer learning with transformers for text classification.",
+    "predicted_tag": "natural-language-processing"
+  }
+]
+
+INFO 2023-02-12 17:34:27,866 [root:main.py:predict_tag:166]
+[
+  {
+    "input_text": "Transfer learning with transformers for text classification.",
+    "predicted_tag": "natural-language-processing"
+  }
+]
+
+INFO 2023-02-12 17:34:56,666 [root:main.py:predict_tag:166]
+[
+  {
+    "input_text": "Transfer learning with transformers for text classification.",
+    "predicted_tag": "natural-language-processing"
+  }
+]
+
