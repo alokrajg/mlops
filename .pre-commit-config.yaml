@@ -44,3 +44,9 @@ repos:
       args: ["clean"]
       language: system
       pass_filenames: false
+    - id: dvc
+      name: dvc
+      entry: make
+      args: ["dvc"]
+      language: system
+      pass_filenames: false

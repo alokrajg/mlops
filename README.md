@@ -502,6 +502,85 @@ cat .pre-commit-config.yaml
 git add .
 git commit -m <MESSAGE>
 ```
+## 12. Data version (DVC)
+
+1. Set up
+```
+# Initialization
+pip install dvc==2.10.2
+dvc init
+```
+
+2. Remote storage
+
+After initializing DVC, we can establish where our remote storage will be. We'll be creating and using the stores/blob directory as our remote storage but in a production setting this would be something like S3.
+```
+# Inside config/config.py
+BLOB_STORE = Path(STORES_DIR, "blob")
+BLOB_STORE.mkdir(parents=True, exist_ok=True)
+```
+We need to notify DVC about this storage location so it knows where to save the data assets:
+>dvc remote add -d storage stores/blob
+
+3. Add data
+
+Now we're ready to add our data to our remote storage. This will automatically add the respective data assets to a .gitignore file (a new one will be created inside the data directory) and create pointer files which will point to where the data assets are actually stores (our remote storage).
+```
+# Add artifacts
+dvc add data/projects.csv
+dvc add data/tags.csv
+dvc add data/labeled_projects.csv
+```
+all the pointer files that were created for each data artifact we added:
+```
+data
+├── .gitignore
+├── labeled_projects.csv
+├── labeled_projects.csv.dvc
+├── projects.csv
+├── projects.csv.dvc
+├── tags.csv
+└── tags.csv.dvc
+```
+Each pointer file will contain the md5 hash, size and the location (with respect to the data directory) which we'll be checking into our git repository.
+```
+# data/projects.csv.dvc
+outs:
+- md5: b103754da50e2e3e969894aa94a490ee
+  size: 266992
+  path: projects.csv
+```
+
+4. Push
+Now we're ready to push our artifacts to our blob store:
+>dvc push
+
+If we inspect our storage (stores/blob), we'll can see that the data is efficiently stored:
+```
+# Remote storage
+stores
+└── blob
+    ├── 3e
+    │   └── 173e183b81085ff2d2dc3f137020ba
+    ├── 72
+    │   └── 2d428f0e7add4b359d287ec15d54ec
+    ...
+```
+5. Pull
+
+When someone else wants to pull our data assets, we can use the pull command to fetch from our remote storage to our local directories
+>dvc pull
+
+```
+# Makefile
+.PHONY: dvc
+dvc:
+	dvc add data/projects.csv
+	dvc add data/tags.csv
+	dvc add data/labeled_projects.csv
+	dvc push
+```
+
 
 # Workflow
 ```
